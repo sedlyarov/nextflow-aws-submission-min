@@ -10,24 +10,8 @@ When an external file is staged in nextflow process, existence of the input file
 
 This behavior depends of maxForks parameter in nextflow.config
 
-
-## S3 setup
-
-Modify the following variables in conf/profiles.config  
-
-profiles.aws.workDir
-profiles.aws.params.logDirFallback  
-
-
-
 ## How to run
 
 ```
 nextflow run main.nf -profile aws --file somefile.txt
 ```
-
-## CI/CD
-
-Automatically deploying docker container to AWS ECR.  
-feature/ and bug/ are deployed to AWS compbio dev  
-master is deployed to AWS compbio prod
